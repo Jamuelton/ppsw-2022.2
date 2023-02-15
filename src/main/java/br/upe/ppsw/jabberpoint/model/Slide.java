@@ -1,14 +1,22 @@
-package br.upe.ppsw.jabberpoint.apresentacao;
+package br.upe.ppsw.jabberpoint.model;
+
+
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.ImageObserver;
 import java.util.Vector;
 
-public class Slide {
+import br.upe.ppsw.jabberpoint.view.Style;
 
-  public final static int WIDTH = 1200;
-  public final static int HEIGHT = 800;
+
+
+public class Slide{
+	
+	public final static int WIDTH = 1200;
+	public final static int HEIGHT = 800;
+
+  
 
   protected TextItem title;
   protected Vector<SlideItem> items;
@@ -44,30 +52,32 @@ public class Slide {
   public int getSize() {
     return items.size();
   }
-
+  
   public void draw(Graphics g, Rectangle area, ImageObserver view) {
-    float scale = getScale(area);
+	    float scale = getScale(area);
 
-    int y = area.y;
+	    int y = area.y;
 
-    SlideItem slideItem = this.title;
-    Style style = Style.getStyle(slideItem.getLevel());
-    slideItem.draw(area.x, y, scale, g, style, view);
+	    SlideItem slideItem = this.title;
+	    Style style = Style.getStyle(slideItem.getLevel());
+	    slideItem.draw(area.x, y, scale, g, style, view);
 
-    y += slideItem.getBoundingBox(g, view, scale, style).height;
+	    y += slideItem.getBoundingBox(g, view, scale, style).height;
 
-    for (int number = 0; number < getSize(); number++) {
-      slideItem = (SlideItem) getSlideItems().elementAt(number);
+	    for (int number = 0; number < getSize(); number++) {
+	      slideItem = (SlideItem) getSlideItems().elementAt(number);
 
-      style = Style.getStyle(slideItem.getLevel());
-      slideItem.draw(area.x, y, scale, g, style, view);
+	      style = Style.getStyle(slideItem.getLevel());
+	      slideItem.draw(area.x, y, scale, g, style, view);
 
-      y += slideItem.getBoundingBox(g, view, scale, style).height;
-    }
-  }
+	      y += slideItem.getBoundingBox(g, view, scale, style).height;
+	    }
+	  }
 
-  private float getScale(Rectangle area) {
-    return Math.min(((float) area.width) / ((float) WIDTH),
-        ((float) area.height) / ((float) HEIGHT));
-  }
+	  private float getScale(Rectangle area) {
+	    return Math.min(((float) area.width) / ((float) WIDTH),
+	        ((float) area.height) / ((float) HEIGHT));
+	  }
+  
+
 }

@@ -1,10 +1,13 @@
-package br.upe.ppsw.jabberpoint.apresentacao;
+package br.upe.ppsw.jabberpoint.model;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.ImageObserver;
 
-public abstract class SlideItem {
+import br.upe.ppsw.jabberpoint.view.Draw;
+import br.upe.ppsw.jabberpoint.view.Style;
+
+public abstract class SlideItem extends Draw{
 
   private int level = 0;
 
@@ -20,10 +23,6 @@ public abstract class SlideItem {
     return level;
   }
 
-  public abstract Rectangle getBoundingBox(Graphics g, ImageObserver observer, float scale,
-      Style style);
-
-  public abstract void draw(int x, int y, float scale, Graphics g, Style style,
-      ImageObserver observer);
+  
 
 }
