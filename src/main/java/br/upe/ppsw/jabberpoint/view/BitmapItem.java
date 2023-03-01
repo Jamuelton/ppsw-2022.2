@@ -1,4 +1,4 @@
-package br.upe.ppsw.jabberpoint.model;
+package br.upe.ppsw.jabberpoint.view;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import org.springframework.util.ResourceUtils;
 
-import br.upe.ppsw.jabberpoint.view.Style;
+import br.upe.ppsw.jabberpoint.model.SlideItem;
 
 public class BitmapItem extends SlideItem {
 

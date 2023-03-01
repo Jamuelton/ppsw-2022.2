@@ -2,8 +2,6 @@ package br.upe.ppsw.jabberpoint.model;
 
 import java.io.IOException;
 
-import br.upe.ppsw.jabberpoint.view.DemoPresentation;
-
 public abstract class Accessor {
 
   public static final String DEMO_NAME = "Apresentação de Demonstração";
