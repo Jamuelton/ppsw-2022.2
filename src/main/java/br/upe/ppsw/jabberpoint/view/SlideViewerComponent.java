@@ -5,11 +5,14 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
+
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 import br.upe.ppsw.jabberpoint.model.Presentation;
 import br.upe.ppsw.jabberpoint.model.Slide;
+import br.upe.ppsw.jabberpoint.model.SlideItem;
 
 
 
@@ -73,7 +76,33 @@ public class SlideViewerComponent extends JComponent {
 
     Rectangle area = new Rectangle(0, YPOS, getWidth(), (getHeight() - YPOS));
 
-    slide.draw(g, area, this);
+    draw(g, area, this);
   }
+  
+  public void draw(Graphics g, Rectangle area, ImageObserver view) {
+	    float scale = getScale(area);
+
+	    int y = area.y;
+
+	    SlideItem slideItem =  slide.title;
+	    Style style = Style.getStyle(slideItem.getLevel());
+	    slideItem.draw(area.x, y, scale, g, style, view);
+
+	    y += slideItem.getBoundingBox(g, view, scale, style).height;
+
+	    for (int number = 0; number < slide.getSize(); number++) {
+	      slideItem = (SlideItem) slide.getSlideItems().elementAt(number);
+
+	      style = Style.getStyle(slideItem.getLevel());
+	      slideItem.draw(area.x, y, scale, g, style, view);
+
+	      y += slideItem.getBoundingBox(g, view, scale, style).height;
+	    }
+	  }
+
+	  private float getScale(Rectangle area) {
+	    return Math.min(((float) area.width) / ((float) WIDTH),
+	        ((float) area.height) / ((float) HEIGHT));
+	  }
 
 }

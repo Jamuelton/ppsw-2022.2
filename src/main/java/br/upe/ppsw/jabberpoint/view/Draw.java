@@ -15,7 +15,5 @@ public interface Draw {
     public void draw(int x, int y, float scale, Graphics g, Style style,
       ImageObserver observer);
 
-      
-
 
 }
