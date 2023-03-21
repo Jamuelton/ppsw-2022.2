@@ -25,10 +25,13 @@ public class SlideViewerComponent extends JComponent {
   private static final int YPOS = 20;
 
   private Slide slide;
-  private Draw slideDraw;
+  
   private Font labelFont = null;
   private Presentation presentation = null;
   private JFrame frame = null;
+  
+  public final static int WIDTH = 1200;
+  public final static int HEIGHT = 800;
 
   public SlideViewerComponent(Presentation pres, JFrame frame) {
     setBackground(BGCOLOR);
@@ -38,7 +41,7 @@ public class SlideViewerComponent extends JComponent {
   }
 
   public Dimension getPreferredSize() { 
-    return new Dimension(Slide.WIDTH, Slide.HEIGHT);
+    return new Dimension(WIDTH,HEIGHT);
   }
 
   public void update(Presentation presentation, Slide data) {
@@ -52,6 +55,8 @@ public class SlideViewerComponent extends JComponent {
     repaint();
     frame.setTitle(presentation.getTitle());
   }
+  
+  
 
   public void paintComponent(Graphics g) {
     g.setColor(BGCOLOR);
