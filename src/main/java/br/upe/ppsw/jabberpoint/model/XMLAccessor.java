@@ -14,7 +14,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class XMLAccessor implements Accessor {
+public class XMLAccessor implements AccessorSave { // implementando AcessorSave ao invés de Acessor q apenas tem o método de load
 
   protected static final String DEFAULT_API_TO_USE = "dom";
 

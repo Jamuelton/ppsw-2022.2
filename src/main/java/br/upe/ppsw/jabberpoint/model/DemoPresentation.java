@@ -47,8 +47,5 @@ public class DemoPresentation implements Accessor {
     presentation.append(slide);
   }
 
-  public void saveFile(Presentation presentation, String unusedFilename) {
-    throw new IllegalStateException("Não é possível salvar arquivo na versão demo!");
-  }
-
+  	//tirando método de salvar desnecessário
 }

@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import org.springframework.util.ResourceUtils;
 
 import br.upe.ppsw.jabberpoint.model.Accessor;
+import br.upe.ppsw.jabberpoint.model.AccessorSave;
 import br.upe.ppsw.jabberpoint.model.Presentation;
 import br.upe.ppsw.jabberpoint.model.XMLAccessor;
 import br.upe.ppsw.jabberpoint.view.AboutBox;
@@ -81,7 +82,7 @@ public class MenuController extends MenuBar {
 
     menuItem.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        Accessor xmlAccessor = new XMLAccessor();
+        AccessorSave xmlAccessor = new XMLAccessor(); // mudando tipo de xmlAcessor de Accessor para AcessorSave
         try {
           xmlAccessor.saveFile(presentation, SAVEFILE);
         } catch (IOException exc) {
