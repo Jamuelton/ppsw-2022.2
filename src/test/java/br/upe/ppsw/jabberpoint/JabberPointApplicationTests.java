@@ -7,10 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class JabberPointApplicationTests {
 
   public JabberPointApplicationTests() {
-
+	  
   }
 
   @Test
   public void contextLoads() {}
-
+  
+  
 }

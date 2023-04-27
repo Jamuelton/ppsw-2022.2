@@ -1,11 +1,13 @@
 package br.upe.ppsw.jabberpoint.model;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import org.springframework.util.ResourceUtils;
 
 public class DemoPresentation implements Accessor {
 
-  public void loadFile(Presentation presentation, String unusedFilename) throws FileNotFoundException {
+  public Presentation loadFile(Presentation presentation, String unusedFilename) throws FileNotFoundException {
 
     presentation.setTitle("Apresentação de Demonstração");
 
@@ -45,7 +47,14 @@ public class DemoPresentation implements Accessor {
     slide.append(
         new BitmapItem(1, ResourceUtils.getFile("classpath:JabberPoint.jpg").getAbsolutePath()));
     presentation.append(slide);
+	return presentation;
   }
+
+@Override
+public void saveFile(Presentation presentation, String fileName) throws IOException {
+	// TODO Auto-generated method stub
+	
+}
 
   	//tirando método de salvar desnecessário
 }

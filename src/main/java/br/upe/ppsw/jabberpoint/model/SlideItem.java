@@ -7,7 +7,7 @@ import java.awt.image.ImageObserver;
 import br.upe.ppsw.jabberpoint.view.Draw;
 import br.upe.ppsw.jabberpoint.view.Style;
 
-public abstract class SlideItem implements Draw{
+public abstract  class SlideItem implements Draw{
 
   private int level = 0;
 

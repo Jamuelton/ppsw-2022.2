@@ -7,10 +7,11 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
+import br.upe.ppsw.jabberpoint.control.JsonAccessor;
+import br.upe.ppsw.jabberpoint.control.XMLAccessor;
 import br.upe.ppsw.jabberpoint.model.Accessor;
 import br.upe.ppsw.jabberpoint.model.DemoPresentation;
 import br.upe.ppsw.jabberpoint.model.Presentation;
-import br.upe.ppsw.jabberpoint.model.XMLAccessor;
 import br.upe.ppsw.jabberpoint.view.SlideViewerFrame;
 import br.upe.ppsw.jabberpoint.view.Style;
 
@@ -37,6 +38,14 @@ public class JabberPointApplication implements CommandLineRunner {
     new SlideViewerFrame(JABVERSION, presentation);
     
     DemoPresentation demo = new DemoPresentation();
+    
+//    JsonAccessor accessor = new JsonAccessor();
+//    accessor.saveFile(presentation, "presentation.json");
+//    
+//    Presentation loadedPresentation = accessor.loadFile(new Presentation(), "presentation.json");
+//    
+//    System.out.println("Title: " + loadedPresentation.getTitle());
+
 
     try {
       if (args.length == 0) {

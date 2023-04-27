@@ -83,4 +83,30 @@ public class Presentation {
   public void exit(int n) {
     System.exit(n);
   }
+
+public ArrayList<Slide> getShowList() {
+	return showList;
+}
+
+public void setShowList(ArrayList<Slide> showList) {
+	this.showList = showList;
+}
+
+public SlideViewerComponent getSlideViewComponent() {
+	return slideViewComponent;
+}
+
+public void setSlideViewComponent(SlideViewerComponent slideViewComponent) {
+	this.slideViewComponent = slideViewComponent;
+}
+
+public int getCurrentSlideNumber() {
+	return currentSlideNumber;
+}
+
+public void setCurrentSlideNumber(int currentSlideNumber) {
+	this.currentSlideNumber = currentSlideNumber;
+}
+  
+  
 }

@@ -1,0 +1,155 @@
+{
+  "title": "JSON-Based Presentation for Jabberpoint",
+  "slides": [
+    {
+      "title": "JabberPoint JSON-Demo",
+      "items": [
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Bem vindo ao Jabberpoint"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Copyright (c) 1996-2021 Ian Darwin"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Reescrito por"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Helaine Barreiros"
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Navegação:"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Próximo Slide: PgDn ou Enter"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Slide Anterior: PgUp ou up-arrow"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Parar: q ou Q"
+        }
+      ]
+    },
+    {
+      "title": "Exemplo de um Slide vazio",
+      "items": [
+        {
+          "level": 1,
+          "kind": "text",
+          "text": " "
+        }
+      ]
+    },
+    {
+      "title": "Fundo",
+      "items": [
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Jabberpoint é um projeto da"
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "do curso de Engenharia de Engenharia de Software da Universidade de Pernambuco"
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": " "
+        },
+        {
+          "level": 2,
+          "kind": "image",
+          "text": "classpath:upe.jpg"
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": " "
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Do Multicampi Garanhuns"
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": " "
+        },
+        {
+          "level": 2,
+          "kind": "image",
+          "text": "classpath:upe_garanhuns.jpg"
+        }
+      ]
+    },
+    {
+      "title": "JabberPoint: Níveis e Estilos",
+      "items": [
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Nível 1"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Nível 2"
+        },
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Apresentação Jabber"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "Nível 2 tem Estilo 2"
+        },
+        {
+          "level": 3,
+          "kind": "text",
+          "text": "Nível 3 tem este estilo"
+        },
+        {
+          "level": 4,
+          "kind": "text",
+          "text": "E o nível 4 tem este"
+        }
+      ]
+    },
+    {
+      "title": "Slide Final",
+      "items": [
+        {
+          "level": 1,
+          "kind": "text",
+          "text": "Você também pode navegar através do menu"
+        },
+        {
+          "level": 2,
+          "kind": "text",
+          "text": "File -> Open"
+        }
+      ]
+    }
+  ]
+}

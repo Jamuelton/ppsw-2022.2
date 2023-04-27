@@ -1,4 +1,4 @@
-package br.upe.ppsw.jabberpoint.model;
+ package br.upe.ppsw.jabberpoint.control;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -14,7 +14,15 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class XMLAccessor implements AccessorSave { // implementando AcessorSave ao invés de Acessor q apenas tem o método de load
+import br.upe.ppsw.jabberpoint.model.Accessor;
+
+import br.upe.ppsw.jabberpoint.model.BitmapItem;
+import br.upe.ppsw.jabberpoint.model.Presentation;
+import br.upe.ppsw.jabberpoint.model.Slide;
+import br.upe.ppsw.jabberpoint.model.SlideItem;
+import br.upe.ppsw.jabberpoint.model.TextItem;
+
+public class XMLAccessor implements Accessor { // implementando AcessorSave ao invés de Acessor q apenas tem o método de load
 
   protected static final String DEFAULT_API_TO_USE = "dom";
 
@@ -38,7 +46,7 @@ public class XMLAccessor implements AccessorSave { // implementando AcessorSave 
 
   }
 
-  public void loadFile(Presentation presentation, String filename) throws IOException {
+  public Presentation loadFile(Presentation presentation, String filename) throws IOException {
     int slideNumber, itemNumber, max = 0, maxItems = 0;
 
     try {
@@ -75,6 +83,7 @@ public class XMLAccessor implements AccessorSave { // implementando AcessorSave 
     } catch (ParserConfigurationException pcx) {
       System.err.println(PCE);
     }
+	return presentation;
 
   }
 

@@ -8,12 +8,14 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import org.springframework.util.ResourceUtils;
 
+//import br.upe.ppsw.jabberpoint.view.BitMapViewer;
 import br.upe.ppsw.jabberpoint.view.Style;
 
 public class BitmapItem extends SlideItem {
 
   private BufferedImage bufferedImage;
   private String imageName;
+  //private BitMapViewer bitViewer; //
 
   protected static final String FILE = "Arquivo ";
   protected static final String NOTFOUND = " não encontrado";
@@ -22,7 +24,9 @@ public class BitmapItem extends SlideItem {
     super(level);
 
     imageName = name;
-
+    
+//    BitMapViewer bit = new BitMapViewer();
+    
     try {
       bufferedImage = ImageIO.read(ResourceUtils.getFile(imageName).getAbsoluteFile());
     } catch (IOException e) {
